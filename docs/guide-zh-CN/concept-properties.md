@@ -75,7 +75,7 @@ $object->label = 'abc';
 * 如果此类属性名和类成员变量相同，以后者为准。例如，
   假设以上 `Foo` 类有个 `label` 成员变量，然后给 `$object->label = 'abc'` 赋值，
   将赋给成员变量而不是 setter `setLabel()` 方法。
-* 这类属性不支持可见性（访问限制）。定义属性的 getter 和 setter 方法是 public、protected 还是 private 对属性的可见性没有任何影响。
+* 这些属性不支持可见性。不管属性是公共的、受保护的还是私有的，都对定义getter或setter方法没有影响。
 * 这类属性的 getter 和 setter 方法只能定义为*非静态*的，若定义为静态方法（static）则不会以相同方式处理。
 * 对不确定有无魔术方法（getter 或 setter）的属性正常调用 `property_exists()` 将不会生效。你应该分别调用 [[yii\base\BaseObject::canGetProperty()|canGetProperty()]] 
   或 [[yii\base\BaseObject::canSetProperty()|canSetProperty()]] 。  
